@@ -1613,6 +1613,11 @@
     schema-utils "^4.2.0"
     source-map "^0.7.3"
 
+"@react-icons/all-files@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@react-icons/all-files/-/all-files-4.1.0.tgz#477284873a0821928224b6fc84c62d2534d6650b"
+  integrity sha512-hxBI2UOuVaI3O/BhQfhtb4kcGn9ft12RWAFVMUeNjqqhLsHvFtzIkFaptBJpFDANTKoDfdVoHTKZDlwKCACbMQ==
+
 "@reduxjs/toolkit@^1.8.1":
   version "1.9.7"
   resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.9.7.tgz#7fc07c0b0ebec52043f8cb43510cf346405f78a6"
@@ -4752,6 +4757,11 @@ flat-cache@^3.0.4:
     flatted "^3.2.9"
     keyv "^4.5.3"
     rimraf "^3.0.2"
+
+flat-color-icons@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/flat-color-icons/-/flat-color-icons-1.1.0.tgz#a52820a73ccbe3df007ac22e5d539be67b4b2710"
+  integrity sha512-duN0PycToLxktav7Asyw0hYCSxH8dvoCbeZHw0zSTw+KXg4rAH4CcLViDrGjg//nLfoZjiDV34kw8xmJJfSfqA==
 
 flatted@^3.2.9:
   version "3.3.3"
