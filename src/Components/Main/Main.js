@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './Main.css'
-import { FaTrash } from "@react-icons/all-files/fa/FaTrash"
+import { FaTrashAlt } from "react-icons/fa"
 
 const Main = () => {
     const [list, setlist] = useState(
@@ -54,11 +54,7 @@ const Main = () => {
                         onDoubleClick={()=>BoxCheck(list.id)}
                     >{list.text}</p>
 
-                    <button 
-                        onClick={()=>ListDelete(list.id)}
-                    >Delete</button>
-
-                    <FaTrash />
+                    <FaTrashAlt onClick={()=>ListDelete(list.id)}/>
                 </li>
             ))}
         </ul>
