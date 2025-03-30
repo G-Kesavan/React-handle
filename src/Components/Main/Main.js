@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './Main.css'
 const Main = () => {
     const [list, setlist] = useState(
         [
@@ -37,7 +38,7 @@ const Main = () => {
   return (
     <main>
         {list.length ?(
-        <ul>
+        <ul className='main-ul'>
             {list.map((list)=>(
                 <li>
                     <input 
