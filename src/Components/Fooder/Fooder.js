@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Fooder = () => {
+const Fooder = ({length}) => {
   return (
     <div>
-      <h3>Copy right 2024</h3>
+      <h3>{length} list {length===1?"item":"items"}</h3>
     </div>
   )
 }

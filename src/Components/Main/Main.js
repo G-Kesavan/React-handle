@@ -1,63 +1,16 @@
 import React from 'react'
-import { useState } from 'react'
 import './Main.css'
-import { FaTrashAlt } from "react-icons/fa"
+import ListItem from '../ListItem/ListItem'
 
-const Main = () => {
-    const [list, setlist] = useState(
-        [
-            {
-                id:1,
-                cheacked:true,
-                text:"Add List"
-            },
-            {
-                id:2,
-                cheacked:true,
-                text:"Add List"
-            },
-            {
-                id:3,
-                cheacked:true,
-                text:"Add List"
-            }
-        ])
-    
-    const BoxCheck = (id) => {
-        const Newlist=list.map((list)=>list.id===id ?
-        {
-            ...list,
-            cheacked:!list.cheacked
-        }
-        :list)
-        setlist(Newlist)
-    }
-
-    const ListDelete = (id)=>{
-        const Newlist=list.filter(list => list.id!==id)
-        setlist(Newlist)
-    }
+const Main = ({ListDelete,list,BoxCheck,key}) => {
   return (
     <main>
         {list.length ?(
-        <ul className='main-ul'>
-            {list.map((list)=>(
-                <li>
-                    <input 
-                        onChange={()=>BoxCheck(list.id)}
-                        type='checkbox'
-                        checked={list.cheacked}
-                    ></input>
-
-                    <p 
-                        style={list.cheacked ? {textDecoration:'line-through'}:null}
-                        onDoubleClick={()=>BoxCheck(list.id)}
-                    >{list.text}</p>
-
-                    <FaTrashAlt onClick={()=>ListDelete(list.id)}/>
-                </li>
-            ))}
-        </ul>
+            <ListItem
+                list={list}
+                BoxCheck={BoxCheck}
+                ListDelete={ListDelete}
+            />
         ):(<p>Your list is Empty...</p>)}
     </main>
   )
