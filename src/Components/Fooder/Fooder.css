@@ -1,0 +1,12 @@
+footer{
+    height: 8%;
+    background-color: rgb(20, 116, 84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:azure;
+    font-size: 20px;
+}
+footer h3{
+    display: flex;
+}

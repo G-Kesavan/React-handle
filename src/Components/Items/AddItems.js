@@ -12,7 +12,7 @@ const AddItems = () => {
         ></input>
         <button
             type='submit'
-        ><FaPlus/></button>
+        ><FaPlus /></button>
     </form>
   )
 }

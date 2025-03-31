@@ -1,6 +1,6 @@
 import React from 'react'
 import './Main.css'
-import ListItem from '../Items/ListItem'
+import ListItem from '../Items/List_Items'
 
 const Main = ({ListDelete,list,BoxCheck,key}) => {
   return (
@@ -11,7 +11,7 @@ const Main = ({ListDelete,list,BoxCheck,key}) => {
                 BoxCheck={BoxCheck}
                 ListDelete={ListDelete}
             />
-        ):(<p>Your list is Empty...</p>)}
+        ):(<p style={{display:'flex'}}>Your list is Empty...</p>)}
     </main>
   )
 }

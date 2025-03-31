@@ -23,6 +23,26 @@ const App = () => {
             id:3,
             cheacked:true,
             text:"Add List"
+        },
+        {
+            id:4,
+            cheacked:true,
+            text:"Add List"
+        },
+        {
+            id:5,
+            cheacked:true,
+            text:"Add List"
+        },
+        {
+            id:6,
+            cheacked:true,
+            text:"Add List"
+        },
+        {
+            id:7,
+            cheacked:true,
+            text:"Add List"
         }
     ])
 
@@ -41,7 +61,7 @@ const ListDelete = (id)=>{
     setlist(Newlist)
 }
   return (
-    <div className='App'>
+    <div className='app'>
         <Header title="To do list"/>
         <AddItems/>
         <Main 

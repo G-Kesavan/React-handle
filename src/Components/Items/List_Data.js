@@ -15,7 +15,7 @@ const List = ({ListDelete,list,BoxCheck}) => {
             onDoubleClick={()=>BoxCheck(list.id)}
         >{list.text}</p>
 
-        <FaTrashAlt onClick={()=>ListDelete(list.id)}/>
+        <FaTrashAlt className='delete-icon' onClick={()=>ListDelete(list.id)}/>
     </li>
   )
 }
