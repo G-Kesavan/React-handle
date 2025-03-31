@@ -1,6 +1,6 @@
 import React from 'react'
 import './Main.css'
-import ListItem from '../ListItem/ListItem'
+import ListItem from '../Items/ListItem'
 
 const Main = ({ListDelete,list,BoxCheck,key}) => {
   return (

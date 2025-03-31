@@ -1,5 +1,5 @@
 import React from 'react'
-import List from './List/List'
+import List from './List'
 
 const ListItem = ({ListDelete,list,BoxCheck}) => {
   return (

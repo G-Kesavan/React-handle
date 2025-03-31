@@ -2,6 +2,7 @@ import React from 'react'
 import Main from './Components/Main/Main'
 import Header from './Components/Header/Header'
 import Fooder from './Components/Fooder/Fooder'
+import AddItems from './Components/Items/AddItems'
 import './App.css'
 import { useState } from 'react'
 
@@ -42,6 +43,7 @@ const ListDelete = (id)=>{
   return (
     <div className='App'>
         <Header title="To do list"/>
+        <AddItems/>
         <Main 
           list={list}
           BoxCheck={BoxCheck}
