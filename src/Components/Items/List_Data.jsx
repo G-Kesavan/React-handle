@@ -3,11 +3,12 @@ import { FaTrashAlt } from "react-icons/fa"
 
 const List = ({ListDelete,list,BoxCheck}) => {
   return (
-    <li>
+    <li >
         <input 
             onChange={()=>BoxCheck(list.id)}
             type='checkbox'
             checked={list.cheacked}
+            id={list.id}
         ></input>
 
         <p 

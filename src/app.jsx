@@ -1,4 +1,3 @@
-import React from 'react'
 import Main from './Components/Main/Main'
 import Header from './Components/Header/Header'
 import Fooder from './Components/Fooder/Fooder'
@@ -55,6 +54,12 @@ const BoxCheck = (id) => {
     :list)
     setlist(Newlist)
 }
+const AddItem = (text) => {
+    const id = list.length? list[list.length-1].id+1 :1;
+    const AddNewItem ={id,text,cheacked:false}
+    const fixAddNewItem = [...list,AddNewItem]
+    setlist(fixAddNewItem)
+}
 
 const ListDelete = (id)=>{
     const Newlist=list.filter(list => list.id!==id)
@@ -63,7 +68,7 @@ const ListDelete = (id)=>{
   return (
     <div className='app'>
         <Header title="To do list"/>
-        <AddItems/>
+        <AddItems AddItem={AddItem}/>
         <Main 
           list={list}
           BoxCheck={BoxCheck}
