@@ -4,7 +4,7 @@ import './Header.css'
 const Header = (props) => {
   return (
     <header>
-      <h3>{props.title}</h3>
+      <h3>{props.title.toUpperCase()}</h3>
     </header>
   )
 }

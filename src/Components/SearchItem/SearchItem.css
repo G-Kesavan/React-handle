@@ -1,0 +1,18 @@
+.searchItemForm{
+    height:10vh;
+    width: calc(70vw + 30px + 6.5vh);
+    background-color: rgb(20, 116, 84);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    border-radius: 0px 0px 20px 20px ;
+}
+
+.searchItemForm input{
+    height: 6.5vh;
+    width: calc(60vw + 6.5vh + 32px);
+    border-radius: 10px;
+    border: solid 1px black;
+    padding-left: 20px;
+    outline: none;
+}

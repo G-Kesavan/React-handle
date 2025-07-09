@@ -1,15 +1,15 @@
 import React from 'react'
 import './Main.css'
-import ListItem from '../Items/List_Items'
+import List from '../List/List'
 
-const Main = ({ListDelete,list,BoxCheck,key}) => {
+const Main = ({deleteItem,items,boxCheck}) => {
   return (
     <main>
-        {list.length ?(
-            <ListItem
-                list={list}
-                BoxCheck={BoxCheck}
-                ListDelete={ListDelete}
+        {items.length ?(
+            <List
+                items={items}
+                boxCheck={boxCheck}
+                deleteItem={deleteItem}
             />
         ):(<p style={{display:'flex'}}>Your list is Empty...</p>)}
     </main>

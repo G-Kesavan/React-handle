@@ -4,11 +4,9 @@
     list-style: none;
     font-family:'Segoe UI';
     align-items: center;
-    justify-content: center;
-    width: 100%;
 }
 #root{
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 body{

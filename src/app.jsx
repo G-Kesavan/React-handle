@@ -1,80 +1,66 @@
 import Main from './Components/Main/Main'
 import Header from './Components/Header/Header'
-import Fooder from './Components/Fooder/Fooder'
-import AddItems from './Components/Items/AddItems'
+import Footer from './Components/Footer/Footer'
+import AddItem from './Components/AddItem/AddItem'
 import './App.css'
 import { useState } from 'react'
+import SearchItem from './Components/SearchItem/SearchItem'
 
 const App = () => {
-  const [list, setlist] = useState(
+  const [items, setItems] = useState(
     [
         {
             id:1,
-            cheacked:true,
-            text:"Add List"
-        },
-        {
-            id:2,
-            cheacked:true,
-            text:"Add List"
-        },
-        {
-            id:3,
-            cheacked:true,
-            text:"Add List"
-        },
-        {
-            id:4,
-            cheacked:true,
-            text:"Add List"
-        },
-        {
-            id:5,
-            cheacked:true,
-            text:"Add List"
-        },
-        {
-            id:6,
-            cheacked:true,
-            text:"Add List"
-        },
-        {
-            id:7,
-            cheacked:true,
-            text:"Add List"
+            cheacked:false,
+            text:"Add Your New List"
         }
     ])
 
-const BoxCheck = (id) => {
-    const Newlist=list.map((list)=>list.id===id ?
+const boxCheck = (id) => {
+    const newItems=items.map((item)=>item.id===id ?
     {
-        ...list,
-        cheacked:!list.cheacked
+        ...item,
+        cheacked:!item.cheacked
     }
-    :list)
-    setlist(Newlist)
+    :item)
+    setItems(newItems)
 }
-const AddItem = (text) => {
-    const id = list.length? list[list.length-1].id+1 :1;
-    const AddNewItem ={id,text,cheacked:false}
-    const fixAddNewItem = [...list,AddNewItem]
-    setlist(fixAddNewItem)
+const addItem = (text) => {
+    const id = items.length? items[items.length-1].id+1 :1;
+    const newItem ={id,text,cheacked:false}
+    const newItems = [...items,newItem]
+    setItems(newItems)
 }
 
-const ListDelete = (id)=>{
-    const Newlist=list.filter(list => list.id!==id)
-    setlist(Newlist)
+const deleteItem = (id)=>{
+    const newItems = items.filter(items => items.id!==id)
+    setItems(newItems)
+}
+
+const searchItem =(text)=>{
+    const searchText = text.toUpperCase()
+    const item = document.querySelectorAll('.item')
+    for(let index = 0; index<item.length; index++){
+        const itemText = item[index].querySelector('.itemText').textContent.toUpperCase();
+        if(itemText.indexOf(searchText) > -1){
+            item[index].style.display = 'flex'
+        }else{
+            item[index].style.display = 'none'  
+        }
+    };
+
 }
   return (
     <div className='app'>
-        <Header title="To do list"/>
-        <AddItems AddItem={AddItem}/>
+        <Header title="To Do List"/>
+        <AddItem addItem={addItem}/>
+        <SearchItem searchItem={searchItem}/>
         <Main 
-          list={list}
-          BoxCheck={BoxCheck}
-          ListDelete={ListDelete}
+          items={items}
+          boxCheck={boxCheck}
+          deleteItem={deleteItem}
         />
-        <Fooder length={list.length}/>
+        <Footer length={items.length}/>
     </div>
   )
 }

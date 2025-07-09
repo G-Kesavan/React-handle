@@ -1,0 +1,27 @@
+.addIitemForm{
+    display: flex;
+    height: 10vh;
+    width: calc(70vw + 30px + 6.5vh);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(20, 116, 84);
+}
+.addIitemForm input{
+    width:60vw;
+    height: 6.5vh;
+    border-radius: 10px;
+    padding-left: 20px;
+    border: solid 1px black;
+    outline: none;
+}
+.addIitemForm button{
+    width: 6.5vh;
+    height: 65%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    outline: none;
+}
