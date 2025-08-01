@@ -3,18 +3,28 @@ import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import AddItem from './Components/AddItem/AddItem'
 import './App.css'
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import SearchItem from './Components/SearchItem/SearchItem'
 
 const App = () => {
-  const [items, setItems] = useState(
+
+const [items, setItems] = useState(() => {
+    const saved = localStorage.getItem('myList');
+    return saved ? JSON.parse(saved) :
     [
         {
             id:1,
             cheacked:false,
             text:"Add Your New List"
         }
-    ])
+    ]
+})
+
+useEffect(() => {
+    localStorage.setItem('myList', JSON.stringify(items));
+}, [items]);
+
+    
 
 const boxCheck = (id) => {
     const newItems=items.map((item)=>item.id===id ?

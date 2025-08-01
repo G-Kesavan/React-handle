@@ -15,4 +15,6 @@
     border: solid 1px black;
     padding-left: 20px;
     outline: none;
+    display: flex;
+    font-size: calc(15px + 0.3vw);
 }
